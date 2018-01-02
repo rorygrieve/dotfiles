@@ -18,6 +18,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-surround'
 
 let g:ctrlp_max_files=20000
 set path+=lib/**,spec/**,app/**
