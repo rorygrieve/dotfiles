@@ -21,6 +21,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-surround'
 
 let g:ctrlp_max_files=20000
+let g:ctrlp_custom_ignore = 'node_modules'
 set path+=lib/**,spec/**,app/**
 
 call vundle#end()            " required
