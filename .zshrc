@@ -11,6 +11,7 @@ ZSH_THEME="mh"
 ZSH_SPECTRUM_TEXT=${ZSH_SPECTRUM_TEXT:-Arma virumque cano Troiae qui primus ab oris}
 PROMPT='$FG[001]%~%{$reset_color%} '
 
+
 . `brew --prefix`/etc/profile.d/z.sh
 
 if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
@@ -94,12 +95,27 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export PGHOST=localhost
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export PATH="$HOME/.npm-packages/bin:$PATH"
-export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
+if [[ -e /usr/libexec/java_home ]]; then
+  export JAVA_HOME=`/usr/libexec/java_home`
+fi
+export PATH=$JAVA_HOME/bin:$PATH
 
 source ~/.aliases.zsh
 alias config='/usr/bin/git --git-dir=/Users/rorygrieve/.cfg/ --work-tree=/Users/rorygrieve'
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/rorygrieve/Documents/google/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/rorygrieve/Documents/google/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/rorygrieve/Documents/google/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/rorygrieve/Documents/google/google-cloud-sdk/completion.zsh.inc'; fi
+PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
+export PATH
+
+# rbenv settings
+eval "$(rbenv init -)"
