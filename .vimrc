@@ -13,12 +13,13 @@ Plugin 'ack.vim'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'scrooloose/nerdtree'
 Plugin 'romainl/flattened'
-Plugin 'altercation/vim-colors-solarized'
+" Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-surround'
+Plugin 'YorickPeterse/happy_hacking.vim'
 
 let g:ctrlp_max_files=20000
 let g:ctrlp_custom_ignore = 'node_modules'
@@ -48,13 +49,7 @@ runtime macros/matchit.vim
 
 " http://vimcasts.org/episodes/tabs-and-spaces/
 set ts=2 sts=2 sw=2 expandtab
-set background=dark
-colorscheme solarized
-":color flattened_light
-set t_Co=256                        " force vim to use 256 colors
-let g:solarized_termcolors=256      " use solarized 256 fallback
-
-
+colorscheme happy_hacking
 
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
