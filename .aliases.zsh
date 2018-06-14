@@ -36,11 +36,3 @@ function clone_migrate() {
   echo Applying migrations to development database
   bundle exec rake db:migrate
 }
-
-function prep_deploy() {
-  git checkout master
-  git pull
-  npm run build
-  git add public
-  git commit -v
-}
