@@ -20,6 +20,17 @@ function reset_development_db() {
   be rake db:migrate
 }
 
+function dcm_dev_and_test_dbs() {
+  echo Dropping development and test databases
+  be rake db:drop
+  echo Creating development and test databases
+  be rake db:create
+  echo Applying migrations to development database
+  be rake db:migrate
+  echo Applying migrations to development database
+  RAILS_ENV=test be rake db:migrate
+}
+
 function clone_migrate() {
   bundle exec rake clone_remote_db:production
   echo Applying migrations to development database
