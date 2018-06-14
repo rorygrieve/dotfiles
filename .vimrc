@@ -45,6 +45,7 @@ set scrolloff=5               " keep at least 5 lines above/below
 set sidescrolloff=5           " keep at least 5 lines left/right
 set backspace=indent,eol,start
 set mouse=a
+set list listchars=tab:»·,trail:·,nbsp:·
 runtime macros/matchit.vim
 
 " http://vimcasts.org/episodes/tabs-and-spaces/
