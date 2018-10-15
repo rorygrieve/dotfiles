@@ -28,6 +28,8 @@ set path+=lib/**,spec/**,app/**
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+map <C-n> :NERDTreeToggle<CR>
+
 syntax on 
 set nocompatible
 set autoindent
